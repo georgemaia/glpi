@@ -13,4 +13,6 @@ Procedimentos aplicados durante instalação do GLPI
 
 [Catálogo de Serviços HU-UFJF](docs/Catalogo_Servicos_HU-UFJF.pdf)
 
-[Apresentação Instalação GLPI no Debian 9](https://pt.slideshare.net/halexsandro/glpi-debian-9)
+[Apresentação Gestão de Ativos - George Maia](docs/Gestao_de_ativos_georgemaia.pdf)
+
+[Apresentação Instalação GLPI no Debian 9 - Halexsandro de Freitas Sales](https://pt.slideshare.net/halexsandro/glpi-debian-9)
