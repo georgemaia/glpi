@@ -7,7 +7,7 @@ Procedimentos aplicados durante instalação do GLPI
 
 [PERONDI, Leandro Teixeira. **Sistema para gerenciamento de chamados técnicos**. 2013. 91 f. TCC (Graduação) - Curso de Bacharel em Sistemas de Informação, Centro de Computação e Tecnologia da Informação, Universidade de Caxias do Sul, Caxias do Sul/RS, 2013.](docs/TCC_leandroteixeiraperondi.pdf)
 
-[LOPES, Santiago José Franco. **Melhoria dos serviços de TI utilizando o gerenciamento de serviços**. 2016. 106 f. Dissertação (Mestrado Profissionl) - Curso de Engenharia de Produção, Universidade Estadual Paulista "júlio de Mesquita Filho", Guaratinguetá/SP, 2016](docs/TCC_santianojosefrancolopes.pdf)
+[LOPES, Santiago José Franco. **Melhoria dos serviços de TI utilizando o gerenciamento de serviços**. 2016. 106 f. Dissertação (Mestrado Profissional) - Curso de Engenharia de Produção, Universidade Estadual Paulista "júlio de Mesquita Filho", Guaratinguetá/SP, 2016](docs/TCC_santianojosefrancolopes.pdf)
 
 [Catalogo de Serviços Computel](docs/Catalogo_de_Servicos_Computel.pdf)
 
