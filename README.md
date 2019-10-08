@@ -2,7 +2,109 @@
 
 Procedimentos aplicados durante instalação do GLPI
 
+## **Instalar pré-requisitos obrigatórios**
+
+[https://glpi-install.readthedocs.io/en/latest/prerequisites.html](https://glpi-install.readthedocs.io/en/latest/prerequisites.html)
+
+```bash
+apt-get install apache2 php php-curl php-gd php-cli php-mbstring php-mysql php-xml -y  
+apt-get install mariadb-server -y
+
+```
+
+## **Instalar pré-requisitos opcionais**
+
+```bash
+apt-get install php-cli php-cas php-imap php-ldap php-xmlrpc php-soap php-snmp php-apcu -y
+```
+
+## **Instalar utilitários**
+
+```bash
+apt-get install zip unzip bzip2 unrar-free vim -y
+```
+
+## **Ajustes no php.ini**
+
+```ini
+memory_limit = 64M ; // max memory limit  
+file_uploads = on ;  
+max_execution_time = 600 ; // not mandatory but adviced  
+register_globals = off ; // not mandatory but adviced  
+magic_quotes_sybase = off ;  
+session.auto_start = off ;  
+session.use_trans_sid = 0 ; // not mandatory but adviced
+
+```
+
+## **Download GLPI**
+
+```bash
+cd /tmp  
+wget https://github.com/glpi-project/glpi/releases/download/9.4.3/glpi-9.4.3.tgz 
+tar -xvzf glpi-9.4.3.tgz  
+cp -Rf glpi /var/www/html
+
+```
+
+## **Permissões para a pasta do GLPI**
+
+```bash
+chmod 775 /var/www/html/* -Rf
+chown www-data. /var/www/html/* -Rf
+chmod 777 /var/www/html/glpi/files
+chmod 777 /var/www/html/glpi/config
+chmod 777 /var/www/html/glpi/files/_dumps
+chmod 777 /var/www/html/glpi/files/_sessions
+chmod 777 /var/www/html/glpi/files/_cron
+chmod 777 /var/www/html/glpi/files/_cache
+chmod 777 /var/www/html/glpi/files/_log
+chmod 777 /var/www/html/glpi/files/_lock
+chmod 777 /var/www/html/glpi/files/_graphs
+chmod 777 /var/www/html/glpi/files/_pictures
+chmod 777 /var/www/html/glpi/files/_rss
+chmod 777 /var/www/html/glpi/files/_tmp
+chmod 777 /var/www/html/glpi/files/_uploads
+chmod 777 /var/www/html/glpi/files/_plugins
+```
+
+## **Criação do banco de dados do GLPI**
+
+```bash
+mysql -uroot -p  
+
+mysql> create database glpi;
+
+mysql> create user 'glpi'@'localhost' identified by '123456';
+
+mysql> grant all on glpi.* to glpi identified by '123456';
+
+mysql> quit;
+
+```
+
+## **Configuração de segurança de diretórios do GLPi**
+
+ vim /etc/apache2/conf-available/glpi.conf
+
+        a2enconf glpi.conf
+    
+        service apache2 restart
+
+## Migração de tabelas para InnoDB
+
+[http://www.thiagopassamani.com.br/glpi/tabelas-nao-migradas-para-o-mecanismo-innodb.html](http://www.thiagopassamani.com.br/glpi/tabelas-nao-migradas-para-o-mecanismo-innodb.html)
+
+## Alterar valores padrão
+
+Configurar - geral - valores padrão
+
+Alterar formato de nome, número
+
+
+
 ## Referências
+
 [OLIVEIRA, Daniel de. **Estudo de caso para a implantação de uma ferramenta de Service Desk no NRC/UFJF**. 2017. 115 f. TCC (Graduação) - Curso de Sistemas de Informação, Ciências da Computação, Universidade Federal de Juiz de Fora, Juiz de Fora/MG, 2017.](docs/TCC_danieldeoliveira.pdf)
 
 [PERONDI, Leandro Teixeira. **Sistema para gerenciamento de chamados técnicos**. 2013. 91 f. TCC (Graduação) - Curso de Bacharel em Sistemas de Informação, Centro de Computação e Tecnologia da Informação, Universidade de Caxias do Sul, Caxias do Sul/RS, 2013.](docs/TCC_leandroteixeiraperondi.pdf)
@@ -16,3 +118,7 @@ Procedimentos aplicados durante instalação do GLPI
 [Apresentação Gestão de Ativos - George Maia](docs/Gestao_de_ativos_georgemaia.pdf)
 
 [Apresentação Instalação GLPI no Debian 9 - Halexsandro de Freitas Sales](https://pt.slideshare.net/halexsandro/glpi-debian-9)
+
+[https://www.arthurschaefer.com.br/2019/01/29-instalando-o-glpi-9-3-3-no-debian-9/](https://www.arthurschaefer.com.br/2019/01/29-instalando-o-glpi-9-3-3-no-debian-9/)
+
+[http://www.thiagopassamani.com.br/glpi/abertura-de-chamados-no-glpi-via-e-mail.html](http://www.thiagopassamani.com.br/glpi/abertura-de-chamados-no-glpi-via-e-mail.html)
