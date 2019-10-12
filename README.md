@@ -2,6 +2,8 @@
 
 Procedimentos aplicados durante instalação do GLPI
 
+## Instalar Ubuntu 14.10
+
 ## **Instalar pré-requisitos obrigatórios**
 
 [https://glpi-install.readthedocs.io/en/latest/prerequisites.html](https://glpi-install.readthedocs.io/en/latest/prerequisites.html)
@@ -101,6 +103,8 @@ Configurar - geral - valores padrão
 
 Alterar formato de nome, número
 
+
+## Abertura por email
 
 
 ## Referências
