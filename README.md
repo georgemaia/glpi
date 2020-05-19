@@ -106,6 +106,7 @@ Alterar formato de nome, número
 
 ## Abertura por email
 
+[![GLPI Email](https://img.youtube.com/vi/toiG6f6TETU/0.jpg)](https://www.youtube.com/watch?v=toiG6f6TETU&feature=emb_logo)
 
 ## Referências
 
