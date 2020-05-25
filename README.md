@@ -108,6 +108,8 @@ Alterar formato de nome, número
 
 [![GLPI Email](https://img.youtube.com/vi/toiG6f6TETU/0.jpg)](https://www.youtube.com/watch?v=toiG6f6TETU&feature=emb_logo)
 
+[Videos do Youtube sobre notificação e abertura por email](https://www.youtube.com/results?search_query=glpi+destinat%C3%A1rio+email)
+
 ## Referências
 
 [OLIVEIRA, Daniel de. **Estudo de caso para a implantação de uma ferramenta de Service Desk no NRC/UFJF**. 2017. 115 f. TCC (Graduação) - Curso de Sistemas de Informação, Ciências da Computação, Universidade Federal de Juiz de Fora, Juiz de Fora/MG, 2017.](docs/TCC_danieldeoliveira.pdf)
