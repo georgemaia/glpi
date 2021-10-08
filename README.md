@@ -8,8 +8,14 @@ Procedimentos aplicados durante instalação do GLPI
 
 ### **Instalação pré-requisitos obrigatórios Ubuntu 14.04**
 
+#### **Ubuntu 14.04**
+
+[https://releases.ubuntu.com/14.04/ubuntu-14.04.6-server-amd64.iso](https://releases.ubuntu.com/14.04/ubuntu-14.04.6-server-amd64.iso)
+
+#### **Guia**
 [https://glpi-install.readthedocs.io/en/latest/prerequisites.html](https://glpi-install.readthedocs.io/en/latest/prerequisites.html)
 
+### **Instalação obrigatoria** 
 ```bash
 apt-get install apache2 php php-curl php-gd php-cli php-mbstring php-mysql php-xml -y  
 apt-get install mariadb-server -y
@@ -74,7 +80,7 @@ chmod 777 /var/www/html/glpi/files/_plugins
 ### **Criação do banco de dados do GLPI**
 
 ```bash
-mysql -uroot -p  
+mysql -u root -p  
 
 mysql> create database glpi;
 
